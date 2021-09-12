@@ -1,0 +1,13 @@
+################################################
+
+Commerical project of a quiz where users can find out which
+dog breeds fits their personality. The application queries
+the dog breed and their characteristics from an external
+API-endpoint. The quiz is a wizzardView spanning multiple
+pages.
+
+Most challenging part of this project was the data_handler script
+that matches the dogs characteristics returned from the API with
+the result from the form
+
+################################################

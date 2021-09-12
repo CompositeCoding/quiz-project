@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+{% block head %}
+{{ wizard.form.media }}
+{% endblock %}
+{% block content %}
+<div style="margin-top:5vh;margin-bottom: 150px;" class="container-fluid">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ wizard.management_form }}
+            {% if wizard.form.forms %}
+            {{ wizard.form.management_form }}
+            {% for form in wizard.form.forms %}
+            {{ form }}
+            {% endfor %}
+            {% else %}
+
+            {% for item in wizard.form %}
+            <div class="marb-15 text-center bazoeki-blue ">
+                <h2>{{item.label}}</h2>
+            </div>
+            <div  class="container">
+                <div class="marb-15 mart-25 padt-25 d-flex justify-content-center bazoeki-blue">
+
+                    <h6>{{item}}</h6>
+
+
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </table>
+        <div class="bottomDiv fixed-bottom container">
+            <div class="d-flex justify-content-center ">
+                {% if wizard.steps.prev %}
+                    <!-- <button class="btn btn-lg btn-bazoeki-yellow padl-30 padr-30 padt-11 padb-10" name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }} ">{% trans "Eerste" %}</button> -->
+                    <button class="btn btn-lg btn-bazoeki-yellow padl-30 padr-30 padt-11 padb-10 marr-10" name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" formnovalidate>{% trans "Vorige" %}</button>
+                {% endif %}
+                    <input class="btn btn-lg btn-bazoeki-yellow padl-30 padr-30 padt-11 padb-10" type="submit" value="{% trans "Volgende" %}"/>
+            </div>
+            <div class="mart-15 d-flex justify-content-center bazoeki-blue  ">
+                    <h6>Vraag {{ wizard.steps.step1 }} van de {{ wizard.steps.count }}</h6>
+           </div>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

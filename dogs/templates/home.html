@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="mt-0 bazoeki-green circlediv">
+    <div class="container">
+        <div class="text-center bazoeki-white padt-100">
+            <h2>Doe de Quiz!</h2>
+        </div>
+        <div class="text-center bazoeki-white  padt-50">
+            <h4>Doe de quiz die op basis van jouw eigenschappen de hond kiest die bij je past!</h4>
+        </div>
+        <div class="mart-100 d-flex justify-content-center">
+            <a class='btn btn-lg btn-bazoeki-yellow padl-30 padr-30 padt-11 padb-10' href="{% url 'quiz' %}">Start Quiz!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

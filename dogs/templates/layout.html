@@ -1,0 +1,81 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+                <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NQZLNMW');</script>
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146597512-4"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-146597512-4');
+          </script>
+
+
+          <!-- End Google Tag Manager -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/jpg" href="{% static 'images/BazoekiLogo.png'%}"/>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Welke hond pas bij mij? | Doe de Quiz | Bazoeki</title>
+        <meta name="title" content="Welke hond pas bij mij? | Doe de Quiz | Bazoeki">
+        <meta name="keywords" content="Bazoeki,past,hond, Ras, Quiz, Test">
+        <meta name="description" content="Wil je weten welke hond in jouw leven past? Doe deze Quizz en vind vooraf gescreende fokkers via Bazoeki.">
+
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQZLNMW"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <nav class="navbar navbar-expand-lg navbar-light bazoeki-green mb-0">
+            <a class="navbar-brand" href="https://www.bazoeki.com/"> <img src="{% static 'images/bazoeki.svg'%}" alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+              <ul class="navbar-nav mr-auto"></ul>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.bazoeki.com/vragen">Al je vragen</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.bazoeki.com/rasoverzicht">Ras of kruising</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.bazoeki.com/bazoekistandaard">Bazoeki standaard</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.bazoeki.com/overons">Wie zijn wij?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.bazoeki.com/voorfokkers">Voor fokkers</a>
+                    </li>
+                  </ul>
+              <span>
+                <a class="nav-link btn-bazoeki-nav" href="https://www.bazoeki.com/nestjes">Koop een pup</a>
+              </span>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
