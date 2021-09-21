@@ -27,6 +27,11 @@ def home(request):
     return render(request, 'home.html')
 
 def results(request, form=None):
+
+    """ This view accepts the result of the data_handler as kwarg and returns
+        the dogs back the client
+    """
+
     context = dict()
     form = form.split(';')
     dogs = Dog.objects.filter(name__in=form).filter(image__isnull=False).filter(link__isnull=False)
