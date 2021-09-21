@@ -20,6 +20,11 @@ import requests
 
 
 def migrate_dogs():
+
+    """ This fuction makes a call to the Airtable API-point to fetch the
+        dog breeds and their charactistics. The database models
+        are then populated with the results """
+
     Dog.objects.all().delete()
     airtable = Airtable(env('BASE_KEY'),env('TABLE_NAME'),env('API_KEY'))
     table = airtable.get_all()
